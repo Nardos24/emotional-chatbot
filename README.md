@@ -41,20 +41,20 @@ The Emotional AI Chatbot uses a feedforward neural network and is designed for u
 ### Installation
 
 1. Clone the repository:
-   \`\`\`bash
+   ```bash
    git clone https://github.com/your-username/emotional_ai_chatbot.git
    cd emotional_ai_chatbot
-   \`\`\`
+   ```
 
 2. Install dependencies:
-   \`\`\`bash
+   ```bash
    pip install -r requirements.txt
-   \`\`\`
+   ```
 
 3. Create a .env file in the root directory and add your OpenRouter API key:
-   \`\`\`plaintext
+   ```plaintext
    OPENROUTER_API_KEY=your_api_key_here
-   \`\`\`
+   ```
 
 ## Configuration
 
@@ -64,15 +64,15 @@ All configurable parameters are handled directly in the code or through environm
 
 ### Starting the Backend
 To run the Flask backend server, execute:
-\`\`\`bash
+```bash
 python app.py
-\`\`\`
+```
 
 ### Starting the Frontend
 In another terminal, run the Streamlit frontend:
-\`\`\`bash
+```bash
 streamlit run frontend/ui.py
-\`\`\`
+```
 
 ## Features
 
@@ -84,7 +84,7 @@ streamlit run frontend/ui.py
 
 ## File Structure
 
-\`\`\`
+```
 emotional_ai_chatbot/
 ├── app.py                # Flask backend server
 ├── frontend/             # Frontend files
@@ -93,4 +93,4 @@ emotional_ai_chatbot/
 ├── requirements.txt      # Dependency list
 ├── .env                  # Environment variables
 └── README.md             # This README file
-\`\`\`
+```
