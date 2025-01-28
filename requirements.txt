@@ -1,0 +1,8 @@
+Python 3.7+
+Flask
+Flask-CORS
+LangChain
+OpenAI's Python library
+Streamlit
+python-dotenv
+Requests
