@@ -42,8 +42,8 @@ def calculate_emotions():
         securing_rate = float(data.get("securingRate", 4))  # 1-7 scale
 
         # Calculate emotions using the correct scale (1-5)
-        anger = min(7, max(1, 1 + ((1 - valence / 7) * (arousal / 7) * (goal_directedness / 7) * (selection_threshold / 7) * 6)))
-        sadness = min(7, max(1, 1 + ((1 - valence / 7) * (1 - arousal / 7) * (securing_rate / 7) * 6)))
+        anger = min(5, max(1, 1 + ((1 - valence / 7) * (arousal / 7) * (goal_directedness / 7) * (selection_threshold / 7)* (1 - resolution / 7) * 4)))
+        sadness = min(5, max(1, 1 + ((1 - valence / 7) * (1 - arousal / 7) * (securing_rate / 7) * 4)))
 
         print(f"🔹 Calculated Emotions → Anger: {round(anger, 2)}, Sadness: {round(sadness, 2)}")
 
