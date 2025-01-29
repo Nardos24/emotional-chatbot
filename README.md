@@ -15,7 +15,7 @@ This repository contains the implementation of an **Emotional AI Chatbot** that 
 - [Features](#features)
   - [Tasks Implemented](#tasks-implemented)
 - [File Structure](#file-structure)
-- [References](#references)
+
 
 ## Overview
 
@@ -42,7 +42,7 @@ The Emotional AI Chatbot uses a feedforward neural network and is designed for u
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/emotional_ai_chatbot.git
+   git clone https://github.com/Nardos24/emotional-chatbot.git
    cd emotional_ai_chatbot
    ```
 
@@ -71,7 +71,7 @@ python app.py
 ### Starting the Frontend
 In another terminal, run the Streamlit frontend:
 ```bash
-streamlit run frontend/ui.py
+streamlit run ui.py
 ```
 
 ## Features
@@ -87,9 +87,8 @@ streamlit run frontend/ui.py
 ```
 emotional_ai_chatbot/
 ├── app.py                # Flask backend server
-├── frontend/             # Frontend files
-│   ├── ui.py             # Streamlit UI script
-│   ├── config.yaml       # Configuration file (if applicable)
+├──  ui.py                # Streamlit UI script
+│── .gitignore            
 ├── requirements.txt      # Dependency list
 ├── .env                  # Environment variables
 └── README.md             # This README file
