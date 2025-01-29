@@ -23,11 +23,6 @@ llm = ChatOpenAI(
 memory = ConversationBufferMemory()
 conversation_chain = ConversationChain(llm=llm, memory=memory)
 
-# 🔹 Serve Frontend
-@app.route('/')
-def index():
-    return render_template("index.html")
-
 # 🔹 Emotional State Calculation
 @app.route('/calculate-emotions', methods=['POST'])
 def calculate_emotions():
@@ -68,8 +63,8 @@ def send_message():
         goal_directedness = float(parameters.get("goalDirectedness", 4))
         securing_rate = float(parameters.get("securingRate", 4))
 
-        anger = min(7, max(1, 1 + ((1 - valence / 7) * (arousal / 7) * (goal_directedness / 7) * (selection_threshold / 7) * 6)))
-        sadness = min(7, max(1, 1 + ((1 - valence / 7) * (1 - arousal / 7) * (securing_rate / 7) * 6)))
+        anger = min(5, max(1, 1 + ((1 - valence / 7) * (arousal / 7) * (goal_directedness / 7) * (selection_threshold / 7) * 4)))
+        sadness = min(5, max(1, 1 + ((1 - valence / 7) * (1 - arousal / 7) * (securing_rate / 7) * 4)))
 
         # 🟢 Enhanced Emotional Context for Chatbot
         emotional_context = f"""
